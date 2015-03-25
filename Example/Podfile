@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'pushamp-ios', :exclusive => true do
+  pod "pushamp-ios", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "pushamp-ios", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
