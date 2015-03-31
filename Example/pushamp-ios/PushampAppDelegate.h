@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <pushamp-ios/PushAMP.h>
 
-@interface PushampAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PushampAppDelegate : UIResponder <UIApplicationDelegate, PushAMPDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (0.3.2)
+  - pushamp-ios (0.1.0)
+  - Specta (0.4.0)
+
+DEPENDENCIES:
+  - Expecta
+  - pushamp-ios (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  pushamp-ios:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
+  pushamp-ios: cafd89369b0af0af2573c1470bbec689e5a384b5
+  Specta: a353759f073ffcc0a365b782fe4aaeac064c03c6
+
+COCOAPODS: 0.36.1

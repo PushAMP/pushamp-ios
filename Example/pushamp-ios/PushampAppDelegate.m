@@ -15,6 +15,42 @@
     // Override point for customization after application launch.
     return YES;
 }
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+#if DEBUG
+    [PushAMP engageWithAPIKey:@"iosdev_apptoken" delegate:self];
+#else
+    [PushAMP engageWithAPIKey:@"iosprod_apptoken" delegate:self];
+#endif
+    
+    //now ask the user if they want to recieve push notifications. You can place this in another part of your app.
+    [[PushAMP shared] registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)tokenData
+{
+    // Call the convenience method registerDeviceToken, this helps us track device tokens for you
+    [[PushAMP shared] registerDeviceToken:tokenData];
+    
+    // This would be a good time to save the token and associate it with a user that you want to notify later.
+    NSString *tokenString = [PushAMP deviceTokenFromData:tokenData];
+    NSLog(@"%@", tokenString);
+    
+    // For instance you can associate it with a user's email address
+    // [[PushAMP shared] subscribeToChannel:@"user@example.com"];
+    // You can then use the /broadcast endpoint to notify all devices subscribed to that email address. No need to save tokens!
+    // Don't forget to unsubscribe from the channel when the user logs out of your app!
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"%@", [error description]);
+    //Common reason for errors:
+    //  1.) Simulator does not support receiving push notifications
+    //  2.) User rejected push alert
+    //  3.) "no valid 'aps-environment' entitlement string found for application"
+    //      This means your provisioning profile does not have Push Notifications configured.
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -31,11 +67,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
