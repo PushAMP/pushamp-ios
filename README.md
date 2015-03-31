@@ -1,6 +1,6 @@
 # pushamp-ios
 
-[![CI Status](http://img.shields.io/travis/Dmitry Ziltcov/pushamp-ios.svg?style=flat)](https://travis-ci.org/Dmitry Ziltcov/pushamp-ios)
+[![CI Status](http://img.shields.io/travis/PushAMP/pushamp-ios.svg?style=flat)](https://travis-ci.org/PushAMP/pushamp-ios)
 [![Version](https://img.shields.io/cocoapods/v/pushamp-ios.svg?style=flat)](http://cocoapods.org/pods/pushamp-ios)
 [![License](https://img.shields.io/cocoapods/l/pushamp-ios.svg?style=flat)](http://cocoapods.org/pods/pushamp-ios)
 [![Platform](https://img.shields.io/cocoapods/p/pushamp-ios.svg?style=flat)](http://cocoapods.org/pods/pushamp-ios)
