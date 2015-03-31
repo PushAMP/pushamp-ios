@@ -6,8 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/pushamp-ios.svg?style=flat)](http://cocoapods.org/pods/pushamp-ios)
 
 ## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To install and usage, see our **[documentation »](https://github.com/PushAMP/pushamp-ios/wiki/Install)**
 
 ## Requirements
 
@@ -19,7 +18,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "pushamp-ios"
 ```
-
+## Want to Contribute?
+The PushAMP library for iOS is an open source project, and we'd love to see your contributions!
 ## Author
 
 Dmitry Ziltcov, dzhiltsov@me.com
