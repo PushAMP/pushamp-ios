@@ -1,8 +1,8 @@
 {
   "name": "pushamp-ios",
   "version": "0.1.0",
-  "summary": "A short description of pushamp-ios.",
-  "description": "                       An optional longer description of pushamp-ios\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "summary": "iOS library for PushAMP",
+  "description": "                       [![PushAMP Cocoapod](https://img.shields.io/cocoapods/v/pushamp-ios.svg)](http://cocoapods.org/?q=pushamp-ios)\n                       [![PushAMP Travis](https://img.shields.io/travis/PushAMP/pushamp-ios.svg)](https://travis-ci.org/PushAMP/pushamp-ios)\n\n                        PushAMP supports `Cocoapods` for easy installation.\n                        To Install, see our **[documentation »](https://github.com/PushAMP/pushamp-ios/wiki/Install)**\n\n                        **Want to Contribute?**\n\n                        The PushAMP library for iOS is an open source project, and we'd love to see your contributions!\n",
   "homepage": "https://github.com/PushAMP/pushamp-ios",
   "license": "MIT",
   "authors": {
